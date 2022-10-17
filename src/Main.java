@@ -21,9 +21,6 @@ public class Main {
             a++;
             b++;
             isRome = true;
-            if (a <= b ) {
-                throw new Exception();
-            }
         } else if (isNumeric(spl[0]) & isNumeric(spl[2])) {
             a = Integer.parseInt(spl[0]);
             b = Integer.parseInt(spl[2]);
@@ -43,7 +40,7 @@ public class Main {
         }
         if (isRome) {
             if (result <= 0) {
-                return ("");
+                throw new Exception();
             }
             return romeToInt(result);
         }
